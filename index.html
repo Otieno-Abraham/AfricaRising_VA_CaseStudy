@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abraham Otieno · Africa Rising VA · Executive Case Study</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0b1424;
+      font-family: 'Inter', sans-serif;
+      color: #eaf0ff;
+      line-height: 1.6;
+      padding: 2rem 1.5rem;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: rgba(18, 30, 48, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 2.8rem;
+      box-shadow: 0 25px 50px -12px #030712;
+      padding: 2.8rem;
+      margin-bottom: 2.8rem;
+      transition: all 0.3s ease;
+    }
+
+    h1 {
+      font-size: 3.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #ffffff, #a6c1ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      color: #fff;
+      margin-bottom: 2rem;
+      border-left: 6px solid #3b82f6;
+      padding-left: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      color: #d9e6ff;
+      margin: 2.5rem 0 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .scenario-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: #13223b;
+      border: 1px solid #2f4b7a;
+      border-radius: 60px;
+      padding: 0.7rem 2rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 2rem;
+    }
+
+    .scenario-badge i {
+      color: #3b82f6;
+      font-size: 1.8rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0 2.5rem;
+    }
+
+    .stat-card {
+      background: rgba(8, 24, 48, 0.6);
+      border: 1px solid #2c4066;
+      border-radius: 2rem;
+      padding: 1.8rem 1rem;
+      text-align: center;
+      backdrop-filter: blur(4px);
+    }
+
+    .stat-number {
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: white;
+      text-shadow: 0 0 12px #3b82f6;
+    }
+
+    .stat-label {
+      color: #9bb4e0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #3b82f6;
+      box-shadow: 0 0 30px #3b82f680;
+      transition: transform 0.2s;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.02);
+    }
+
+    /* ----- ROADMAP with flowing arrows ----- */
+    .roadmap {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin: 2rem 0;
+    }
+
+    .roadmap-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem 0.8rem;
+    }
+
+    .milestone {
+      flex: 1 1 200px;
+      background: rgba(15, 30, 50, 0.9);
+      border: 1px solid #2f4d7a;
+      border-radius: 2rem;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      backdrop-filter: blur(4px);
+    }
+
+    .milestone-number {
+      background: #3b82f6;
+      color: white;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin: 0 auto 1rem;
+    }
+
+    .milestone ul {
+      text-align: left;
+      margin: 0.8rem 0 0 1.5rem;
+      color: #c7daff;
+      font-size: 0.85rem;
+    }
+
+    .decision-box {
+      border: 2px solid #f5b042;
+      background: #1e2c1e;
+    }
+
+    /* Stylish arrows */
+    .arrow-flow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: flowGlow 2s infinite ease-in-out;
+      filter: drop-shadow(0 0 6px #3b82f6);
+      margin: 0 0.2rem;
+    }
+
+    @keyframes flowGlow {
+      0% { opacity: 0.7; transform: translateX(0); }
+      50% { opacity: 1; transform: translateX(3px); }
+      100% { opacity: 0.7; transform: translateX(0); }
+    }
+
+    .arrow-down {
+      font-size: 2.5rem;
+      background: linear-gradient(to bottom, #3b82f6, #a78bfa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: flowDown 2s infinite;
+    }
+
+    @keyframes flowDown {
+      0% { opacity: 0.6; transform: translateY(0); }
+      50% { opacity: 1; transform: translateY(4px); }
+      100% { opacity: 0.6; transform: translateY(0); }
+    }
+
+    .path-indicator {
+      display: flex;
+      gap: 1rem;
+      margin: 1rem 0 2rem;
+    }
+
+    .path {
+      flex: 1;
+      background: rgba(0, 20, 40, 0.6);
+      border-radius: 1.5rem;
+      padding: 1rem 1.5rem;
+      border-left: 6px solid;
+    }
+
+    .path-yes {
+      border-left-color: #f5b042;
+    }
+    .path-no {
+      border-left-color: #10b981;
+    }
+
+    .image-block {
+      border-radius: 2rem;
+      overflow: hidden;
+      border: 2px solid #2f5496;
+      height: 240px;
+      background: #162c48;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .image-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    /* ----- repurposing cards with actual content examples ----- */
+    .repurpose-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.8rem;
+      margin: 2rem 0;
+    }
+
+    .repurpose-card {
+      background: #10243f;
+      border: 2px solid #2f4f8a;
+      border-radius: 2rem;
+      padding: 1.5rem 1rem;
+      transition: 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .repurpose-card:hover {
+      border-color: #3b82f6;
+      transform: translateY(-4px);
+    }
+
+    .repurpose-icon {
+      font-size: 2.8rem;
+      color: #8bb2ff;
+      margin-bottom: 0.5rem;
+    }
+
+    .repurpose-title {
+      font-weight: 700;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .content-example {
+      background: #0b1b30;
+      border-radius: 1.2rem;
+      padding: 1rem;
+      width: 100%;
+      margin: 0.8rem 0;
+      border-left: 4px solid #3b82f6;
+      font-size: 0.9rem;
+      text-align: left;
+      color: #c7ddff;
+    }
+
+    .content-example i {
+      color: #f5b042;
+      margin-right: 0.4rem;
+    }
+
+    .repurpose-desc {
+      font-size: 0.9rem;
+      color: #b8d0ff;
+      margin-top: 0.3rem;
+    }
+
+    .storyboard-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.2rem;
+      margin: 2rem 0;
+    }
+
+    .story-panel {
+      background: #10233e;
+      border: 2px solid #315a94;
+      border-radius: 1.5rem;
+      padding: 1.2rem;
+      text-align: center;
+    }
+
+    .panel-visual {
+      background: #1b3155;
+      border-radius: 1rem;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      border: 1px solid #3f6190;
+      margin-bottom: 0.8rem;
+      font-size: 2rem;
+      color: #c0d4ff;
+    }
+
+    .panel-label {
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .panel-desc {
+      font-size: 0.8rem;
+      color: #b1c9ff;
+    }
+
+    .chip {
+      display: inline-block;
+      background: #132744;
+      border: 1px solid #2f5390;
+      border-radius: 40px;
+      padding: 0.5rem 1.5rem;
+      margin: 0.2rem 0.3rem;
+      font-weight: 500;
+    }
+
+    .footer-note {
+      background: #0f1f36;
+      border-radius: 2rem;
+      padding: 2rem;
+      border: 1px solid #315a94;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    hr {
+      border: 1px solid #1f3a5e;
+      margin: 3rem 0;
+    }
+
+    @media (max-width: 800px) {
+      h1 { font-size: 2.8rem; }
+      .two-col { grid-template-columns: 1fr; }
+      .storyboard-grid { grid-template-columns: 1fr 1fr; }
+      .roadmap-row .arrow-flow { display: none; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HERO with profile picture -->
+  <div class="card" style="background: linear-gradient(145deg, #0e1d30, #142b44);">
+    <div style="display: flex; flex-wrap: wrap; gap: 2.5rem; align-items: center;">
+      <div style="flex: 2;">
+        <h1>Abraham Otieno</h1>
+        <div style="font-size: 1.8rem; color: #c2d9ff; margin-bottom: 1rem;">Africa Rising Virtual Assistant Program</div>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
+          <span class="scenario-badge"><i class="fas fa-car-battery"></i> Scenario 2: EV Dispute</span>
+          <span class="scenario-badge"><i class="fas fa-chart-line"></i> Scenario 3: Content Repurposing</span>
+        </div>
+      </div>
+      <div style="flex: 1; text-align: center;">
+        <img src="abu.jpg" alt="Abraham Otieno" class="profile-pic" onerror="this.onerror=null; this.src='https://via.placeholder.com/140?text=ABU';">
+        <div style="margin-top: 0.8rem; font-weight: 500;">Abraham Otieno</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== SCENARIO 2 ========== -->
+  <div class="card">
+    <div class="scenario-badge"><i class="fas fa-car-side"></i> Scenario 2 · Electric Vehicle Financing Dispute</div>
+
+    <div class="stats-grid">
+      <div class="stat-card"><span class="stat-number">$15,952</span><span class="stat-label">Lending Value</span></div>
+      <div class="stat-card"><span class="stat-number">$22,275</span><span class="stat-label">Typical Listing</span></div>
+      <div class="stat-card"><span class="stat-number">$20,005</span><span class="stat-label">Fair Purchase</span></div>
+      <div class="stat-card"><span class="stat-number">106k</span><span class="stat-label">Mileage</span></div>
+      <div class="stat-card"><span class="stat-number">SC01</span><span class="stat-label">Supercharging</span></div>
+    </div>
+
+    <div class="two-col">
+      <div style="background: #0f233d; border-radius: 2rem; padding: 2rem;">
+        <i class="fas fa-quote-left" style="font-size: 2.5rem; color: #3b82f6;"></i>
+        <p style="margin-top: 1rem; font-size: 1.1rem;">“SC01 free supercharging, full self‑driving – this unicorn is worth $30k. Only pre‑April 2017 Teslas have this.”</p>
+        <p style="color: #a2bff0; margin-top: 1rem;">— customer SMS, March 2026</p>
+      </div>
+      <div class="image-block">
+        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&auto=format" alt="Tesla Model S 2017" onerror="this.parentElement.innerHTML='<i class=\'fas fa-car\' style=\'font-size:4rem; color:#aaa;\'></i>';">
+      </div>
+    </div>
+
+    <h3><i class="fas fa-map-signals"></i> Support Roadmap – with flowing arrows</h3>
+
+    <div class="roadmap">
+      <!-- Row 1: steps 1 → 2 → 3 with stylish arrows -->
+      <div class="roadmap-row">
+        <div class="milestone">
+          <div class="milestone-number">1</div>
+          <div class="milestone-title">Dispute received</div>
+          <ul>
+            <li>Acknowledge < 2h</li>
+            <li>Collect VIN, contact</li>
+            <li>Note features (SC01, FSD)</li>
+            <li>Create ticket</li>
+          </ul>
+        </div>
+        <span class="arrow-flow"><i class="fas fa-arrow-right"></i></span>
+        <div class="milestone">
+          <div class="milestone-number">2</div>
+          <div class="milestone-title">Review report</div>
+          <ul>
+            <li>Pull UsedVehicleSummaryReport</li>
+            <li>Check lending value, mileage</li>
+            <li>Look for SC01 in Book Sheet</li>
+            <li>Compare with fair purchase</li>
+          </ul>
+        </div>
+        <span class="arrow-flow"><i class="fas fa-arrow-right"></i></span>
+        <div class="milestone decision-box">
+          <div class="milestone-number">3</div>
+          <div class="milestone-title">Feature discrepancy?</div>
+          <ul>
+            <li>SC01 or FSD in Book Sheet?</li>
+            <li>Build date before Apr 2017?</li>
+            <li>Ever repurchased by Tesla?</li>
+          </ul>
+          <span style="display:inline-block; background:#f5b042; color:#000; padding:0.2rem 1rem; border-radius:40px; font-weight:700; margin-top:0.5rem;">DECISION</span>
+        </div>
+      </div>
+
+      <!-- Decision paths -->
+      <div class="path-indicator">
+        <div class="path path-yes">
+          <i class="fas fa-check-circle" style="color:#f5b042;"></i> <strong>YES – rare features likely</strong>
+          <ul style="margin-top:0.5rem; color:#c7daff;">
+            <li>Proceed to Step 4A (gather evidence)</li>
+          </ul>
+        </div>
+        <div class="path path-no">
+          <i class="fas fa-times-circle" style="color:#10b981;"></i> <strong>NO – standard vehicle</strong>
+          <ul style="margin-top:0.5rem; color:#c7daff;">
+            <li>Proceed to Step 4B (explain valuation)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Row 2: 4A and 4B side by side -->
+      <div class="roadmap-row">
+        <div class="milestone" style="flex:1;">
+          <div class="milestone-number">4A</div>
+          <div class="milestone-title">Gather evidence</div>
+          <ul>
+            <li>Request VIN decoder output</li>
+            <li>Dealer listing with SC01/FSD</li>
+            <li>Photos of Tesla screen</li>
+            <li>Set deadline: 3 days</li>
+          </ul>
+        </div>
+        <span class="arrow-flow" style="opacity:0.3;"><i class="fas fa-arrow-right"></i></span> <!-- faint arrow for alignment -->
+        <div class="milestone" style="flex:1;">
+          <div class="milestone-number">4B</div>
+          <div class="milestone-title">Explain & close</div>
+          <ul>
+            <li>Send lending vs retail explanation</li>
+            <li>Provide comps</li>
+            <li>Offer to reopen with evidence</li>
+            <li>Close case or go to step 7</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Down arrow merging both paths -->
+      <div class="roadmap-row" style="justify-content: center;">
+        <span class="arrow-down"><i class="fas fa-arrow-down"></i></span>
+      </div>
+
+      <!-- Row 3: step 5 → 6 → 7 -->
+      <div class="roadmap-row">
+        <div class="milestone">
+          <div class="milestone-number">5</div>
+          <div class="milestone-title">Escalate to valuation team</div>
+          <ul>
+            <li>Forward evidence & notes</li>
+            <li>Research comparable unicorn sales</li>
+            <li>Estimate SC01 premium ($5k–$10k)</li>
+          </ul>
+        </div>
+        <span class="arrow-flow"><i class="fas fa-arrow-right"></i></span>
+        <div class="milestone">
+          <div class="milestone-number">6</div>
+          <div class="milestone-title">Final decision</div>
+          <ul>
+            <li>If evidence supports: adjust value</li>
+            <li>If insufficient: confirm original</li>
+            <li>Log rationale</li>
+          </ul>
+        </div>
+        <span class="arrow-flow"><i class="fas fa-arrow-right"></i></span>
+        <div class="milestone">
+          <div class="milestone-number">7</div>
+          <div class="milestone-title">Communicate & close</div>
+          <ul>
+            <li>Notify customer with reasoning</li>
+            <li>Include adjusted value if any</li>
+            <li>Close ticket, QA log</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#102844; border-radius:1.5rem; padding:1.5rem; margin:2rem 0;">
+      <i class="fas fa-book-open" style="color:#3b82f6;"></i> <strong>Source document used:</strong> Book Sheet For 17' Model S with SC01 confirms code existence. Only pre‑April 2017, never repurchased, retains free supercharging.
+    </div>
+    <hr />
+  </div>
+
+  <!-- ========== SCENARIO 3 ========== -->
+  <div class="card">
+    <div class="scenario-badge"><i class="fas fa-chart-line"></i> Scenario 3 · Repurpose Viral LinkedIn Post</div>
+
+    <div class="stats-grid">
+      <div class="stat-card"><span class="stat-number">235k</span><span class="stat-label">Impressions</span></div>
+      <div class="stat-card"><span class="stat-number">148k</span><span class="stat-label">Reach</span></div>
+      <div class="stat-card"><span class="stat-number">3.4k</span><span class="stat-label">Reactions</span></div>
+      <div class="stat-card"><span class="stat-number">286</span><span class="stat-label">Comments</span></div>
+      <div class="stat-card"><span class="stat-number">188</span><span class="stat-label">Saves</span></div>
+      <div class="stat-card"><span class="stat-number">+621</span><span class="stat-label">Followers</span></div>
+    </div>
+
+    <div class="two-col">
+      <div style="background:#0b1f38; border-radius:2rem; padding:2rem;">
+        <i class="fab fa-linkedin" style="color:#0a66c2; font-size:2.5rem;"></i>
+        <p style="margin-top:1rem;">"I was wrong about quitting my job in San Francisco in 2019 and moving to West Africa… Wrong in the best possible way. Six years in: learned French, started family, improved health, explored roots, built career in African talent."</p>
+        <p style="color:#9bb9f0;">— Weh'yee Barkon, July 2025 · breakfast in Rwanda's Kitabi tea region</p>
+      </div>
+      <div class="image-block">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&auto=format" alt="Rwanda tea plantation" onerror="this.parentElement.innerHTML='<i class=\'fas fa-mug-hot\' style=\'font-size:4rem;\'></i>';">
+      </div>
+    </div>
+
+    <h3><i class="fas fa-bullseye"></i> Target audience (from comments)</h3>
+    <div style="margin:1rem 0 2rem;">
+      <span class="chip">🌍 African diaspora</span>
+      <span class="chip">🚀 Founders</span>
+      <span class="chip">✈️ Digital nomads</span>
+      <span class="chip">💼 Career pivoters</span>
+      <span class="chip">📈 Investors</span>
+      <span class="chip">👪 Families</span>
+    </div>
+
+    <!-- Video storyboard (visual representation of the video) -->
+    <h3><i class="fas fa-clapperboard"></i> Video storyboard – "Wrong in the best way" (60s)</h3>
+    <div class="storyboard-grid">
+      <div class="story-panel"><div class="panel-visual"><i class="fas fa-city"></i><i class="fas fa-plane"></i></div><div class="panel-label">Scene 1 (0:00)</div><div class="panel-desc">SF skyline → airplane window. "2019: I thought I was making a huge mistake."</div></div>
+      <div class="story-panel"><div class="panel-visual"><i class="fas fa-globe-africa"></i><i class="fas fa-arrow-right"></i></div><div class="panel-label">Scene 2 (0:10)</div><div class="panel-desc">Map transition: SF → West Africa. "Six years later, grateful."</div></div>
+      <div class="story-panel"><div class="panel-visual"><i class="fas fa-mug-hot"></i><i class="fas fa-mountain"></i></div><div class="panel-label">Scene 3 (0:20)</div><div class="panel-desc">Breakfast in Rwanda's Kitabi tea region. "Space to breathe."</div></div>
+      <div class="story-panel"><div class="panel-visual"><i class="fas fa-family"></i><span>🇫🇷</span></div><div class="panel-label">Scene 4 (0:35)</div><div class="panel-desc">Fast cuts: learned French, started family, improved health.</div></div>
+    </div>
+    <div class="storyboard-grid">
+      <div class="story-panel"><div class="panel-visual"><i class="fas fa-briefcase"></i><i class="fas fa-chart-line"></i></div><div class="panel-label">Scene 5 (0:50)</div><div class="panel-desc">Built career in African talent, entrepreneurship.</div></div>
+      <div class="story-panel"><div class="panel-visual"><i class="fas fa-chart-simple"></i> 235k</div><div class="panel-label">Scene 6 (1:00)</div><div class="panel-desc">Viral metrics overlay. "One post became a movement."</div></div>
+      <div class="story-panel"><div class="panel-visual"><i class="fas fa-quote-right"></i><i class="fas fa-heart"></i></div><div class="panel-label">Scene 7 (1:10)</div><div class="panel-desc">Closing: "What risk will you take?"</div></div>
+      <div class="story-panel"><div class="panel-visual"><i class="fas fa-rotate"></i> #AfricaRising</div><div class="panel-label">End card</div><div class="panel-desc">Follow for more · logo</div></div>
+    </div>
+
+    <!-- REPURPOSING CARDS WITH ACTUAL CONTENT EXAMPLES -->
+    <h3><i class="fas fa-rotate"></i> Multi‑format repurposing – real content examples</h3>
+    <div class="repurpose-grid">
+      <!-- Short videos -->
+      <div class="repurpose-card">
+        <div class="repurpose-icon"><i class="fas fa-film"></i></div>
+        <div class="repurpose-title">Short videos</div>
+        <div class="content-example">
+          <i class="fas fa-play"></i> <strong>Scene 1 hook:</strong> "I was wrong about quitting my SF job..." <br>
+          <i class="fas fa-chart-line"></i> +235k views
+        </div>
+        <div class="repurpose-desc">3x 60s reels (storyboard above) · Reels, TikTok, Shorts</div>
+      </div>
+      <!-- LinkedIn carousel -->
+      <div class="repurpose-card">
+        <div class="repurpose-icon"><i class="fas fa-caret-square-left"></i></div>
+        <div class="repurpose-title">LinkedIn carousel</div>
+        <div class="content-example">
+          <i class="fas fa-slide"></i> Slide 1: "2019: I left SF for West Africa"<br>
+          Slide 2: "What I got wrong..."<br>
+          Slide 8: "Now it's your turn."
+        </div>
+        <div class="repurpose-desc">8 slides: story arc + lessons · LinkedIn</div>
+      </div>
+      <!-- Twitter thread -->
+      <div class="repurpose-card">
+        <div class="repurpose-icon"><i class="fa-brands fa-x-twitter"></i></div>
+        <div class="repurpose-title">Twitter thread</div>
+        <div class="content-example">
+          🧵 1/12: "I was wrong about quitting my SF job in 2019..."<br>
+          🧵 5/12: "Learned French, started a family..."<br>
+          🧵 12/12: "What risk will you take?"
+        </div>
+        <div class="repurpose-desc">12 tweets with metrics & insights · X</div>
+      </div>
+      <!-- Newsletter -->
+      <div class="repurpose-card">
+        <div class="repurpose-icon"><i class="fas fa-newspaper"></i></div>
+        <div class="repurpose-title">Newsletter</div>
+        <div class="content-example">
+          <strong>Subject:</strong> "The unplanned move that changed everything"<br>
+          <i class="fas fa-arrow-right"></i> 5 lessons + practical guide
+        </div>
+        <div class="repurpose-desc">"How to prepare for a continent move" · Substack</div>
+      </div>
+      <!-- Comment-to-content -->
+      <div class="repurpose-card">
+        <div class="repurpose-icon"><i class="fas fa-comment-dots"></i></div>
+        <div class="repurpose-title">Comment‑to‑content</div>
+        <div class="content-example">
+          <i class="fas fa-question"></i> "How did you prepare financially?"<br>
+          <i class="fas fa-reply"></i> New post: "My financial prep before moving"
+        </div>
+        <div class="repurpose-desc">Answer top 5 questions · LinkedIn</div>
+      </div>
+    </div>
+
+    <!-- success metrics & adjustment -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin:3rem 0;">
+      <div style="background:#10263f; border-radius:1.8rem; padding:1.8rem;">
+        <h4 style="color:white;"><i class="fas fa-chart-simple"></i> Success metrics</h4>
+        <ul style="margin-top:1rem; color:#c5d9ff;">
+          <li><i class="fa-regular fa-thumbs-up"></i> Engagement (saves, shares, comments)</li>
+          <li><i class="fa-regular fa-user"></i> New followers & profile views</li>
+          <li><i class="fa-regular fa-envelope"></i> Newsletter signups</li>
+          <li><i class="fa-regular fa-message"></i> Inbound brand inquiries</li>
+        </ul>
+      </div>
+      <div style="background:#10263f; border-radius:1.8rem; padding:1.8rem;">
+        <h4 style="color:white;"><i class="fas fa-sliders"></i> Adjustment plan</h4>
+        <ul style="margin-top:1rem; color:#c5d9ff;">
+          <li><i class="fa-regular fa-clock"></i> Review performance after 10 days</li>
+          <li><i class="fa-regular fa-star"></i> Double down on best format</li>
+          <li><i class="fa-regular fa-comments"></i> Mine comments for next series</li>
+          <li><i class="fa-regular fa-chart-line"></i> A/B test headlines</li>
+        </ul>
+      </div>
+    </div>
+    <hr />
+  </div>
+
+  <div class="footer-note">
+    <i class="fas fa-check-circle" style="color:#3b82f6; font-size:2rem; margin-bottom:1rem;"></i>
+    <p style="font-size:1.2rem; max-width:800px; margin:0 auto;">This case study integrates source PDFs and actual LinkedIn metrics.</p>
+    <p style="margin-top:1.5rem; color:#6f95d0;">© Abraham Otieno · Africa Rising Virtual Assistant Program · 2026</p>
+  </div>
+</div>
+</body>
+</html>
